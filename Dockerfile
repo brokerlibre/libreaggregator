@@ -11,4 +11,4 @@ add ./aggregator /aggregator
 
 workdir /aggregator
 
-cmd python app.py
+#cmd python app.py
