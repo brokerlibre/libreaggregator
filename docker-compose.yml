@@ -1,0 +1,10 @@
+version: '2'
+
+services:
+  aggregator:
+    build:
+      context: .
+      dockerfile: ./Dockerfile
+    restart: unless-stopped
+    ports:
+      - 8000:8000
