@@ -11,6 +11,7 @@ add ./aggregator /libre/aggregator
 add ./api /libre/api
 add ./manage.py /libre/manage.py
 add ./config.sh /tmp/config.sh
+add ./db.sqlite3 /libre/db.sqlite3
 
 workdir libre/
 

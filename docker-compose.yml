@@ -15,6 +15,7 @@ services:
       - ./sale:/libre/sale
       - ./broker:/libre/broker
       - ./insurer:/libre/insurer
+      - ./db.sqlite3:/libre/db.sqlite3
     #command: bash -c "python manage.py makemigrations && \
     #         python manage.py migrate && \
     #         python manage.py runserver 0.0.0.0:8080"
