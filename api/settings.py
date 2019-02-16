@@ -25,7 +25,7 @@ SECRET_KEY = 'l1800sy0gctg3-^6+rc&3zy@o5hhn_m-cft+%r$^w%a9lf-ubx'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['libreapi.temposerver.ml']
 
 CORS_ORIGIN_ALLOW_ALL = True
 
