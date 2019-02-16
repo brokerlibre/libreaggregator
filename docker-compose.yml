@@ -7,6 +7,14 @@ services:
       dockerfile: ./Dockerfile
     restart: unless-stopped
     ports:
-      - 5000:8080
+      - 8080:8080
     volumes:
-      - ./aggregator:/aggregator
+      - ./aggregator:/libre/aggregator
+      - ./api:/libre/api
+      - ./customer:/libre/customer
+      - ./sale:/libre/sale
+      - ./broker:/libre/broker
+      - ./insurer:/libre/insurer
+    #command: bash -c "python manage.py makemigrations && \
+    #         python manage.py migrate && \
+    #         python manage.py runserver 0.0.0.0:8080"

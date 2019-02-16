@@ -7,8 +7,11 @@ run python -m pip install --upgrade pip
 add ./requirements.txt /tmp
 run pip install -r /tmp/requirements.txt
 
-add ./aggregator /aggregator
+add ./aggregator /libre/aggregator
+add ./api /libre/api
+add ./manage.py /libre/manage.py
+add ./config.sh /tmp/config.sh
 
-workdir /aggregator
+workdir libre/
 
-#cmd python app.py
+entrypoint "/tmp/config.sh"
