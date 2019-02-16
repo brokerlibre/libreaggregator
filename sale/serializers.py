@@ -5,6 +5,7 @@ from . import models
 class SaleSerializer(serializers.ModelSerializer):
 
     class Meta:
-        fields = ('name',)
+        fields = ('name', 'totalvalue', 'share', 'broker', 'Customer',
+                 'paymentdate', 'startdate', 'enddate')
         model = models.Sale
 

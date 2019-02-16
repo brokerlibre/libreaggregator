@@ -5,6 +5,6 @@ from . import models
 class InsurerSerializer(serializers.ModelSerializer):
 
     class Meta:
-        fields = ('name',)
+        fields = ('name', 'site', 'api')
         model = models.Insurer
 

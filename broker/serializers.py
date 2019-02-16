@@ -5,6 +5,6 @@ from . import models
 class BrokerSerializer(serializers.ModelSerializer):
 
     class Meta:
-        fields = ('name',)
+        fields = ('name', 'email', 'password', 'passwordconfirmation')
         model = models.Broker
 
