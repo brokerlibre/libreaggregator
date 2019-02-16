@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     'customer',
     'broker',
     'sale',
+    'insurer',
 ]
 
 MIDDLEWARE = [
