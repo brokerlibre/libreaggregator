@@ -1,13 +1,14 @@
 from rest_framework import generics
 from rest_framework.decorators import api_view
+from rest_framework import status
 from rest_framework.response import Response
 
 from .models import Customer
 from .serializers import CustomerSerializer
 
-class CustomerList(generics.ListAPIView):
-    queryset = Customer.objects.all()
-    serializer_class = CustomerSerializer
+#class CustomerList(generics.ListAPIView):
+#    queryset = Customer.objects.all()
+#    serializer_class = CustomerSerializer
 
 
 class CustomerDetail(generics.RetrieveUpdateDestroyAPIView):
@@ -15,11 +16,12 @@ class CustomerDetail(generics.RetrieveUpdateDestroyAPIView):
     serializer_class = CustomerSerializer
 
 @api_view(['GET', 'POST'])
-def customer_list(request):
+def CustomerList(request):
+    serializer_class = CustomerSerializer
     if request.method == 'GET':
         customer = Customer.objects.all()
         customer = CustomerSerializer(customer, many=True)
-        return Response(serializer.data)
+        return Response(customer.data)
 
     elif request.method == 'POST':
         serializer = CustomerSerializer(data=request.data)
