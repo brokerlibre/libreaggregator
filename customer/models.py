@@ -8,7 +8,6 @@ class Customer(models.Model):
     telegram = models.CharField(default='@name', max_length=100)
     facebook = models.CharField(default='name', max_length=100)
     income= models.FloatField(default=0.0)
-    broker = models.ForeignKey(Broker, on_delete=models.CASCADE)
 
     def __str__(self):
         return self.name
